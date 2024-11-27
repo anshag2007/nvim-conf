@@ -28,6 +28,8 @@ return {
             ensure_installed = {
                 "lua_ls",
                 "clangd",
+                "pyright",
+                "jdtls",
             },
             handlers = {
                 function(server_name) -- default handler (optional)
@@ -55,6 +57,8 @@ return {
 
         local cmp_select = { behavior = cmp.SelectBehavior.Select }
 
+        require'lspconfig'.pyright.setup{}
+        require'lspconfig'.jdtls.setup{}
         require 'lspconfig'.clangd.setup {}
         cmp.setup({
             snippet = {
