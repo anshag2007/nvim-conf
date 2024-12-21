@@ -1,7 +1,8 @@
+-- lua/plugins/rose-pine.lua
 return {
-    "Mofiqul/dracula.nvim"
-    -- Add in any other configuration;
-    --   event = foo,
-    --   config = bar
-    --   end,
+	"rose-pine/neovim",
+	name = "rose-pine",
+	config = function()
+		vim.cmd("colorscheme rose-pine")
+	end
 }
