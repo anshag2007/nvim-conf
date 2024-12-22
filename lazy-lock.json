@@ -21,5 +21,6 @@
   "rose-pine": { "branch": "main", "commit": "91548dca53b36dbb9d36c10f114385f759731be1" },
   "telescope.nvim": { "branch": "master", "commit": "a0bbec21143c7bc5f8bb02e0005fa0b982edc026" },
   "undotree": { "branch": "master", "commit": "78b5241191852ffa9bb5da5ff2ee033160798c3b" },
+  "vim-fugitive": { "branch": "master", "commit": "fcb4db52e7f65b95705aa58f0f2df1312c1f2df2" },
   "zen-mode.nvim": { "branch": "main", "commit": "863f150ca321b3dd8aa1a2b69b5f411a220e144f" }
 }
