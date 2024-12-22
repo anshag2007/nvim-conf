@@ -27,7 +27,7 @@ return {
                 vim.keymap.set("n", "<leader>gp", function()
                     vim.fn.jobstart(vim.cmd.Git('push'), {
                         on_exit = function()
-                            vim.cmd("normal! \\<CR>")
+                            vim.api.nvim_feedkeys(vim.api.nvim_replace_termcodes("<CR>", true, false, true), 'n', false)
                             vim.cmd.q()
                         end
                     })
