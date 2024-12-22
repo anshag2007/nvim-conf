@@ -32,7 +32,9 @@ return {
 
         -- vim.keymap.set("n", "gu", "<cmd>diffget //2<CR>")
         -- vim.keymap.set("n", "gh", "<cmd>diffget //3<CR>")
-        vim.keymap.set("n", "<leader>\\p", ":Git push -u origin ");
+        vim.keymap.set("n", "<leader>_", function()
+            vim.cmd.Git('push')
+        end)
         vim.keymap.set("n", "<leader>-", function()
             vim.cmd.Git('commit -a')
         end)
