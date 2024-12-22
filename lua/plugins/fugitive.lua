@@ -24,7 +24,10 @@ return {
 
                 -- NOTE: It allows me to easily set the branch i am pushing and any tracking
                 -- needed if i did not set the branch up correctly
-                vim.keymap.set("n", "<leader>gp", ":Git push -u origin ", opts);
+                vim.keymap.set("n", "<leader>gp", function()
+                    vim.cmd(":Git push -u origin ")
+                    vim.cmd.q()
+                end, opts);
                 vim.keymap.set("n", "<leader>gc", ":Git commit -a ", opts);
                 vim.keymap.set("n", "<leader>gy", ":Git add ", opts);
             end,
