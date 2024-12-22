@@ -6,12 +6,19 @@ return {
     },
 
     config = function()
+        local actions = require("telescope.actions")
         require('telescope').setup({
             defaults = {
                 mappings = {
                     i = {
-                        ["<C-y>"] = require("telescope.actions").select_default,
+                        ["<C-y>"] = actions.select_default,
                     },
+                    n = {
+                        ["<C-n>"] = actions.move_selection_next,
+                        ["<C-p>"] = actions.move_selection_previous,
+                        ["<C-y>"] = actions.select_default,
+                    }
+
                 }
             }
         })

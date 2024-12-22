@@ -36,3 +36,12 @@ vim.keymap.set("n", "<leader>waq", function() -- will save all buffers and exit
 end)
 vim.keymap.set("n", "<leader>q", vim.cmd.q) -- will try to exit the current buffers if no changes are made
 vim.keymap.set("n", "<leader>vv", vim.cmd.so)
+-- move through windows
+vim.keymap.set("n", "<Tab>h", "<C-w>h")
+vim.keymap.set("n", "<Tab>j", "<C-w>j")
+vim.keymap.set("n", "<Tab>k", "<C-w>k")
+vim.keymap.set("n", "<Tab>l", "<C-w>l")
+vim.keymap.set("n", "<Tab>s", "<C-w><C-v>") -- split the current window vertically and start editing the window on the right 
+vim.opt.splitright = true -- windows split right
+vim.keymap.set("n", "<Tab>n", vim.cmd.vnew) -- spawn a new window vertically right 
+vim.keymap.set("n", "<Tab>x", "<C-w><C-q>") -- close the current window
