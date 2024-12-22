@@ -25,7 +25,6 @@ return {
                 -- NOTE: It allows me to easily set the branch i am pushing and any tracking
                 -- needed if i did not set the branch up correctly
                 vim.keymap.set("n", "<leader>gp", function()
-                    vim.cmd.Git('push')
                     vim.fn.jobstart(vim.cmd.Git('push'), {
                         on_exit = function()
                             vim.cmd("normal! \\<CR>")
