@@ -26,8 +26,8 @@ return {
                 -- needed if i did not set the branch up correctly
                 vim.keymap.set("n", "<leader>gp", function()
                     vim.cmd.Git('push')
+                    vim.cmd("normal! \\<CR>")
                     vim.cmd.q()
-                    vim.cmd("<CR>")
                 end, opts);
                 vim.keymap.set("n", "<leader>gc", ":Git commit -a ", opts);
                 vim.keymap.set("n", "<leader>gy", ":Git add ", opts);
