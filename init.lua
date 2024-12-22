@@ -1,4 +1,4 @@
-require("config.lazy") -- change 
+require("config.lazy")
 require("config.remap")
 require("config.set")
 vim.g.netrw_browse_split = 0
