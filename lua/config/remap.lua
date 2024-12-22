@@ -30,8 +30,9 @@ vim.keymap.set("n", "n", "nzzzv")
 vim.keymap.set("n", "N", "Nzzzv")
 vim.keymap.set("n", "<leader>lr", "<cmd>LspRestart<cr>")
 vim.keymap.set("n", "<leader>wq", vim.cmd.wq) -- will save the current buffer and exit the buffer, useful in some scenarios
-vim.keymap.set("n", "<leader>wq", function() -- will save all buffers and exit
+vim.keymap.set("n", "<leader>waq", function() -- will save all buffers and exit
     vim.cmd.wa()
     vim.cmd.q()
 end)
 vim.keymap.set("n", "<leader>q", vim.cmd.q) -- will try to exit the current buffers if no changes are made
+vim.keymap.set("n", "<leader>vv", vim.cmd.so)
